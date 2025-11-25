@@ -2,7 +2,7 @@
 
 Django-приложение для управления книгами (JSON/PostgreSQL, AJAX).
 
-## Запуск в development (Docker Desktop)
+## Запуск в Docker Desktop
 
 1. Установи Docker Desktop и запусти.
 2. Клонируй: `git clone https://github.com/VADG3RN/Project_Aminov_5`
@@ -13,14 +13,6 @@ Django-приложение для управления книгами (JSON/Pos
 7. Перенеси данные: `python migrate_data.py` (локально, host='localhost'). Или внутри: `docker compose exec web python migrate_data.py` (host='db').
 8. Открой: http://localhost:8000/myapp3/add/
 9. Останови: `docker compose down`.
-
-## Production (сервер или PythonAnywhere с Docker-поддержкой)
-
-1. В .env: `DEBUG=0`, сильный SECRET_KEY.
-2. Собери: `docker build -t books-app .`
-3. Запусти: `docker compose up -d`
-4. Статика: `docker compose exec web python manage.py collectstatic --noinput`
-5. Доступ: http://your_ip:8000/myapp3/add/
 
 ## Миграция данных
 
